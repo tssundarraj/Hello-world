@@ -210,3 +210,8 @@ microk8s kubectl logs \<pod-name\>
 
 If you encounter issues or want to enhance this setup with HTTPS,
 scaling, or more advanced configurations, let me know! 🚀
+
+🙏 Thank You!
+
+Thank you for following this guide! If you found it helpful, feel free to share it with others. Happy coding! 🚀
+**T S SUNDAR RAJ 😊**
