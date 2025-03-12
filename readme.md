@@ -1,2 +1,2 @@
-##Hello this a test readme.md   
-#Hello world Beauty madam raagi chanti                                         
+# hello-nginx
+My 1st project (nginx hello world application deploy in Microk8s using docker )
