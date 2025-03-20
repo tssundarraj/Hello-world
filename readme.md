@@ -6,7 +6,8 @@ registry**, and deploying it with **Ingress** for external access.
 
 ------
 
-![Project Diagram](/Images/docker-inginx_image.png)
+![Project Diagram](https://github.com/tssundarraj/hello-nginx/blob/main/Images/docker-inginx_image.png)
+
 ----------
 
 ## 📖 Project Overview
@@ -83,8 +84,6 @@ microk8s status --wait-ready
 ├── deployment.yaml\
 ├── ingress.yaml
 ```
-![Alt text](/Images/Untitled%20Diagram.drawio.svg)
-
 ## **Step 2: Create the HTML File (index.html)**
 
 ```bash
@@ -167,35 +166,12 @@ spec:
     port: 80 
     targetPort: 80 
   ```
-  ## `ingress.yaml`
-
-  ``` sh
-  apiVersion: networking.k8s.io/v1 
-kind: Ingress 
-metadata: 
-  name: nginx-ingress 
-  annotations: 
-    nginx.ingress.kubernetes.io/rewrite-target: / 
-spec: 
-  ingressClassName: public 
-  rules: 
-    - host: docker.server.com 
-      http: 
-        paths: 
-          - path: / 
-            pathType: Prefix 
-            backend: 
-              service: 
-                name: nginx-service 
-                port: 
-                  number: 80 
-```
 
 ## **Step 7: Apply the Resources**
 
 ``` sh
 
-microk8s kubectl apply -f deployment.yaml
+microk8s kubectl apply -f deployment.yaml\
 microk8s kubectl apply -f ingress.yaml
 ```
 
